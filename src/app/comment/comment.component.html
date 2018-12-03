@@ -1,7 +1,9 @@
-<div *ngFor="let item of comments$ | async">
-  <div>
-    <div>{{item.name}}</div>
-    <div>{{item.email}}</div>
-    <div>{{item.body}}</div>
+<div class="wrapper">
+  <div *ngFor="let item of comments$ | async">
+    <div class="box">
+      <!-- <div>{{item.name}}</div> -->
+      <div><b> {{item.email}}</b></div>
+      <div>{{item.body}}</div>
+    </div>
   </div>
 </div>

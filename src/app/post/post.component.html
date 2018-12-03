@@ -1,10 +1,10 @@
 <div>
   <div class="wrapper">
     <div *ngFor="let item of posts$ | async">
-      <div class="box"
-           id="post">
-        <div>{{item.title}}</div>
-        <div>{{item.userId}}</div>
+      <div class="box">
+        <div><b>{{item.title}}</b></div>
+        <br>
+        <!-- <div>{{item.userId}}</div> -->
         <div>{{item.body}}</div>
         <button (click)="SendId(item.id)">Show Comments</button>
       </div>
