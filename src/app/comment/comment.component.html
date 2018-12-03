@@ -1,0 +1,7 @@
+<div *ngFor="let item of comments$ | async">
+  <div>
+    <div>{{item.name}}</div>
+    <div>{{item.email}}</div>
+    <div>{{item.body}}</div>
+  </div>
+</div>

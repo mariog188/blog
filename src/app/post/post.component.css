@@ -1,0 +1,6 @@
+#post {
+  display: inline-block;
+  border: black;
+  border-style: solid;
+  margin: 15px;
+}
