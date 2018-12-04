@@ -1,3 +1,22 @@
-<app-post (selectedPost)="getSelectedPost($event)"></app-post>
-<app-comment *ngIf="postSelected"
-             [Post]="Post"></app-comment>
+<!-- <div id="wrapper"
+     class="clearfix">
+  <app-post id="first"
+            (selectedPost)="getSelectedPost($event)"></app-post>
+  <app-comment id="second"
+               *ngIf="postSelected"
+               [Post]="Post"></app-comment>
+</div> -->
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="letf-content"
+               mode="side"
+               opened>
+    <app-post id="first"
+              (selectedPost)="getSelectedPost($event)"></app-post>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <app-comment id="second"
+                 *ngIf="postSelected"
+                 [Post]="Post"></app-comment>
+  </mat-sidenav-content>
+</mat-sidenav-container>

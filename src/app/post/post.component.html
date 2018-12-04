@@ -1,15 +1,10 @@
-<div>
-  <div>
-    <div *ngFor="let item of posts$ | async">
-      <div>
-        <div><b>{{item.title}}</b></div>
-        <br>
-        <div><a href="#"
-             (click)="selectPost(item)">{{item.body}}</a></div>
-      </div>
-      <!-- <div *ngIf="item.id === postId">
-        <app-comment [idpost]="item.id"></app-comment>
-      </div> -->
-    </div>
-  </div>
-</div>
+<mat-list *ngFor="let item of posts$ | async">
+  <mat-card>
+    <mat-list-item>
+      <mat-card-title><b>{{item.title}}</b></mat-card-title>
+      <br>
+      <mat-card-content><a href="#"
+           (click)="selectPost(item)">{{item.body}}</a></mat-card-content>
+    </mat-list-item>
+  </mat-card>
+</mat-list>

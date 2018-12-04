@@ -1,9 +1,17 @@
-<div>
-  <div *ngFor="let item of comments$ | async">
+<!-- <mat-list *ngFor="let item of comments$ | async">
+  <mat-list-item>
+    <div class="box">
+      <div><b> {{item.email}}</b></div>
+      <div>{{item.body}}</div>
+    </div>
+  </mat-list-item>
+</mat-list> -->
+<mat-list *ngFor="let item of comments$ | async">
+  <mat-list-item>
     <div class="box">
       <!-- <div>{{item.name}}</div> -->
       <div><b> {{item.email}}</b></div>
       <div>{{item.body}}</div>
     </div>
-  </div>
-</div>
+  </mat-list-item>
+</mat-list>

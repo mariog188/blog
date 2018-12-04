@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Post } from './post/post.interface';
-
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -10,6 +9,7 @@ export class AppComponent {
 	title = 'Blog';
 	Post: Post;
 	postSelected = false;
+	constructor() {}
 
 	getSelectedPost(post: Post) {
 		if (post) {
