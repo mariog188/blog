@@ -1,1 +1,3 @@
-<app-post (selectPost)="showComment($event)"></app-post>
+<app-post (selectedPost)="getSelectedPost($event)"></app-post>
+<app-comment *ngIf="postSelected"
+             [Post]="Post"></app-comment>

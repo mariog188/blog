@@ -5,7 +5,7 @@ import { PostComponent } from './post.component';
 
 @NgModule({
 	declarations: [ PostComponent ],
-	imports: [ CommonModule, CommentModule ],
+	imports: [ CommonModule ],
 	exports: [ PostComponent ],
 })
 export class PostModule {}

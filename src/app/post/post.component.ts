@@ -1,7 +1,12 @@
 import { ApiService } from './../api.service';
-import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Post } from './post.interface';
+import {
+	Component,
+	OnInit,
+	Output,
+	EventEmitter,
+} from '@angular/core';
 
 @Component({
 	selector: 'app-post',
@@ -11,14 +16,15 @@ import { Post } from './post.interface';
 export class PostComponent implements OnInit {
 	url = 'https://jsonplaceholder.typicode.com/posts';
 	posts$: Observable<Post[]>;
-	postId;
+	@Output() selectedPost = new EventEmitter<Post>();
+
 	constructor(private apiservice: ApiService) {
 		this.posts$ = apiservice.getData<Post[]>(this.url);
 	}
 
 	ngOnInit() {}
 
-	SendId(id) {
-		this.postId = id;
+	selectPost(post: Post) {
+		this.selectedPost.emit(post);
 	}
 }

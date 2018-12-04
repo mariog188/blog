@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './post/post.interface';
 
 @Component({
 	selector: 'app-root',
@@ -7,9 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'Blog';
-	Post;
-	showComment(post) {
-		debugger;
+	Post: Post;
+	postSelected = false;
+
+	getSelectedPost(post: Post) {
+		if (post) {
+			this.postSelected = true;
+		} else {
+			this.postSelected = false;
+		}
 		this.Post = post;
 	}
 }

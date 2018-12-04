@@ -1,15 +1,15 @@
 <div>
-  <div class="wrapper">
+  <div>
     <div *ngFor="let item of posts$ | async">
-      <div class="box">
+      <div>
         <div><b>{{item.title}}</b></div>
         <br>
-        <div>{{item.body}}</div>
-        <button (click)="SendId(item.id)">Show Comments</button>
+        <div><a href="#"
+             (click)="selectPost(item)">{{item.body}}</a></div>
       </div>
-      <div *ngIf="item.id === postId">
+      <!-- <div *ngIf="item.id === postId">
         <app-comment [idpost]="item.id"></app-comment>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
