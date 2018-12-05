@@ -1,5 +1,5 @@
 <mat-card *ngFor="let item of posts$ | async">
   <mat-card-title><b>{{item.title}}</b></mat-card-title>
   <mat-card-content><a href="#"
-       (click)="selectPost(item)">{{item.body}}</a></mat-card-content>
+       (click)="selectPost(item)"> {{item.body}}</a></mat-card-content>
 </mat-card>
