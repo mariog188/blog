@@ -24,7 +24,6 @@ export class CommentComponent implements OnInit, OnChanges {
 	ngOnInit() {}
 
 	ngOnChanges() {
-		debugger;
 		this.comments$ = this.apiservice.getData<Comment[]>(
 			this.url + '?postId=' + this.Post.id,
 		);
